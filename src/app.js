@@ -23,9 +23,12 @@ app.use(cors({
 });
 
 
-app.get('/data', (req, res) => {
+app.get('/api', (req, res) => {
    try {
       const { slack_name, track } = req.query;
+      if (!slack_name || !track) {
+         return res.status(404).send('Wrong params, pls enter required params')
+      }
       response.slack_name = slack_name;
       response.track = track;
       return res.status(200).json({
