@@ -9,7 +9,8 @@ const app = express();
 
 app.use(morgan('dev'));
 app.use(cors({
-    origin: 'http://localhost:6600'
+    origin: '*',
+    methods: ['GET', 'HEAD'],
  }));
  app.use(bodyParser.json());
  app.use(express.urlencoded({
