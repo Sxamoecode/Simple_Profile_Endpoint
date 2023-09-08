@@ -9,7 +9,7 @@ now.setMinutes(now.getUTCMinutes());
 // Format the date in "yyyy-MM-ddTHH:mm:ssZ" format
 const utc_time = now.toISOString().slice(0, 19) + "Z";
 
-const github_file_url = 'https://github.com/Sxamoecode/Simple_Profile_Endpoint/src/server.js';
+const github_file_url = 'https://github.com/Sxamoecode/Simple_Profile_Endpoint/blob/main/src/server.js';
 const github_repo_url = 'https://github.com/Sxamoecode/Simple_Profile_Endpoint';
 
 exports.data = {
