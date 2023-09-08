@@ -7,7 +7,7 @@ const now = new Date();
 // Calculate the adjusted time by adding or subtracting minutes
 now.setMinutes(now.getUTCMinutes());
 // Format the date in "yyyy-MM-ddTHH:mm:ssZ" format
-const todays_time = now.toISOString().slice(0, 19) + "Z";
+const utc_time = now.toISOString().slice(0, 19) + "Z";
 
 const github_file_url = 'https://github.com/Sxamoecode/Simple_Profile_Endpoint/src/server.js';
 const github_repo_url = 'https://github.com/Sxamoecode/Simple_Profile_Endpoint';
@@ -15,7 +15,7 @@ const github_repo_url = 'https://github.com/Sxamoecode/Simple_Profile_Endpoint';
 exports.data = {
     slack_name,
     current_day,
-    todays_time,
+    utc_time,
     track,
     github_file_url,
     github_repo_url,
