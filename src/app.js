@@ -3,7 +3,7 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-const {response} = require('./model/data');
+const {data} = require('./model/data');
 const app = express();
 
 
@@ -29,11 +29,11 @@ app.get('/api', (req, res) => {
       if (!slack_name || !track) {
          return res.status(404).send('Wrong params, pls enter required params')
       }
-      response.slack_name = slack_name;
-      response.track = track;
-      return res.status(200).json({
-         response
-      });
+      data.slack_name = slack_name;
+      data.track = track;
+      return res.status(200).json(
+         data
+      );
    } catch (error) {
       console.error(error.message);
       return res.status(500).json({

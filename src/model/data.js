@@ -5,7 +5,7 @@ const utc_time = new Date().toISOString();
 const github_file_url = 'https://github.com/Sxamoecode/Simple_Profile_Endpoint/src/server.js';
 const github_repo_url = 'https://github.com/Sxamoecode/Simple_Profile_Endpoint';
 
-exports.response = {
+exports.data = {
     slack_name,
     current_day,
     utc_time,
