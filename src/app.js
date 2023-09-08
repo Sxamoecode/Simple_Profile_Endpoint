@@ -32,6 +32,9 @@ app.get('/api', (req, res) => {
       }
       data.slack_name = slack_name;
       data.track = track;
+
+      const now = new Date();
+      data.utc_time = now.toISOString().split(".")[0] + "Z"
       return res.status(200).json(
          data
       );
